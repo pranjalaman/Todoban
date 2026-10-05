@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Todoban - a simple kanban style todo board.">
+  <title>Todoban - Kanban Todo Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>TODOBAN</h1>
+    <p>Add a task, then drag it across the board!</p>
+  </header>
+
+  <!-- Form to add a new task -->
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="What needs to be done?" required>
+    <button type="submit" id="add-btn">ADD TASK</button>
+  </form>
+
+  <!-- The 3 kanban columns -->
+  <main id="board">
+
+    <section class="column" id="todo-column" data-status="todo">
+      <h2>TO DO <span class="count" id="todo-count">0</span></h2>
+      <div class="task-list" id="todo-list"></div>
+    </section>
+
+    <section class="column" id="doing-column" data-status="doing">
+      <h2>DOING <span class="count" id="doing-count">0</span></h2>
+      <div class="task-list" id="doing-list"></div>
+    </section>
+
+    <section class="column" id="done-column" data-status="done">
+      <h2>DONE <span class="count" id="done-count">0</span></h2>
+      <div class="task-list" id="done-list"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
